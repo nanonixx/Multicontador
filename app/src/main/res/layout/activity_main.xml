@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/magenta"
+    tools:context=".MainActivity">
+
+    //arriba del todo
+
+    <Button
+        android:id="@+id/resetAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET ALL"
+        app:layout_constraintBottom_toTopOf="@id/resetA"
+        app:layout_constraintLeft_toRightOf="@id/countAll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/countAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/sumaA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/resetAll"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //CONTADOR A
+
+
+    <TextView
+        android:id="@+id/countA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/resetAll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sumaA"
+        app:layout_constraintBottom_toTopOf="@id/resetB" />
+
+    <Button
+        android:id="@+id/sumaA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/resetB"
+        app:layout_constraintRight_toLeftOf="@id/resetA"
+        app:layout_constraintTop_toBottomOf="@id/resetAll"
+        app:layout_constraintLeft_toRightOf="@id/countA" />
+
+    <Button
+        android:id="@+id/resetA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/resetB"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetAll"
+        app:layout_constraintLeft_toRightOf="@id/sumaA"/>
+
+    //CONTADOR B
+
+    <TextView
+        android:id="@+id/countB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/resetA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sumaB"
+        app:layout_constraintBottom_toTopOf="@id/resetC" />
+
+    <Button
+        android:id="@+id/sumaB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/resetC"
+        app:layout_constraintRight_toLeftOf="@id/resetB"
+        app:layout_constraintTop_toBottomOf="@id/resetA"
+        app:layout_constraintLeft_toRightOf="@id/countB" />
+
+    <Button
+        android:id="@+id/resetB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/resetC"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetA"
+        app:layout_constraintLeft_toRightOf="@id/sumaB" />
+
+    //CONTADOR C
+
+    <TextView
+        android:id="@+id/countC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/countB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sumaC"
+        app:layout_constraintBottom_toTopOf="@id/countD" />
+
+    <Button
+        android:id="@+id/sumaC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/sumaD"
+        app:layout_constraintRight_toLeftOf="@id/resetC"
+        app:layout_constraintTop_toBottomOf="@id/resetB"
+        app:layout_constraintLeft_toRightOf="@id/countC" />
+
+    <Button
+        android:id="@+id/resetC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toTopOf="@id/resetD"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetB"
+        app:layout_constraintLeft_toRightOf="@id/sumaC" />
+
+    //CONTADOR D
+
+    <TextView
+        android:id="@+id/countD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/countC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sumaD"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/sumaD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/resetD"
+        app:layout_constraintTop_toBottomOf="@id/resetC"
+        app:layout_constraintLeft_toRightOf="@id/countD" />
+
+    <Button
+        android:id="@+id/resetD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resetC"
+        app:layout_constraintLeft_toRightOf="@id/sumaD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
